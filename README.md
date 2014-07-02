@@ -2,4 +2,4 @@ Node.js Neo4j Example [![Build Status](https://apibeta.shippable.com/projects/53
 =================
 
 
-Uses Neo4j, a powerful open-source graph database. The app 111connects to a Neo4j instance and tests simple saving and retrieving of a single node using the node-neo4j module. Shippable.yml shows how to start Neo4j and run mocha tests with testing and coverage reports displaying on Shippable.com.
+Uses Neo4j, a powerful open-source graph database. The app 123 connects to a Neo4j instance and tests simple saving and retrieving of a single node using the node-neo4j module. Shippable.yml shows how to start Neo4j and run mocha tests with testing and coverage reports displaying on Shippable.com.
