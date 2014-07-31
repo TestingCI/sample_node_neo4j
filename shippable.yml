@@ -13,7 +13,8 @@ services:
 # The path for Xunit to output test reports
 env:
  global:
-  - secure: BF6tscQCa9uZgh3YvCu9xfVcOshnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
+  - secure: CPINlAUH38IMGU5QxY86hmbAL0wYLNnY0ozk6Q6JffGl4L21cMDA5DQRPIQsHfJZ1A291LxHi42mwTeDSfoPSS7jaDgxQyqiwpbKvgpdQ56iG548nCQOrEsdW8Wvj/dGYXsKFukWUuMnYmzF7OsmJwjGem3D03qT4er9Lq8//lG/0GwYwMHqi52tokxrru5D/bfEseffnI5+nu1WLJOuwm+BhSug32j6x9rOYqdyl+q7ZCFAo9AIZU02C8EJZal6DvW6JDB/lJsP/dlECZrXHXQJhaiBS5oFNBTHOSsO0QzNjm6MwpwIshNB0PYWEEusRp1iFFvm8XLQL537DimbXw==
+  #- secure: BF6tscQCa9uZgh3YvCu9xfVcOshnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
   - XUNIT_FILE=shippable/testresults/result.xml
 
 # Create directories for test and coverage reports
@@ -25,7 +26,7 @@ before_script:
 script:
   - npm test
   - echo $foo
-
+  - echo $var
 # Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
