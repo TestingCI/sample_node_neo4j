@@ -13,6 +13,7 @@ services:
 # The path for Xunit to output test reports
 env:
  global:
+  - secure: WHyKizToCXpbACg8Otud6bTNE7doaCWwqkBxvb+yakAKHGY6BUKBJyDuEz+nmjJb3Ppw6sD2VGgJG4C9O7AFFcGF/7A6zJuz4B/s/+EPFBcMyg3qkCPxGQJqCzZJv2EqfbN5fOrxRlOocLdcHy8+edtWOpzPy0RjZH2I0diWiNaXFzBe0tPqWkDWjUjtkBNCVm4ieTKirYZiEgglA+pBnLRDRpIKm644LchHQu4J6kX2K2mA3L0AJMevdVbojvsi5+MqFZtNE/3bmpKDT2TuV9/9GbAmhiUcYuuKlPh4CE00A5KT70k2PJcF/SSTSKn9BT28npYd4ugcPiibEawOTw==
   - secure: tuDmmzi6W5QKsN9ho5Cu4SFr+sl1bySkCtcwijxvRk6Mi8szpqTqinGb8ldSWjYtJEc7yAWt7oP+j7bxixEvZOOsQ+bWOI49vdlApvmXOzl7FVYQmyKwivbBxoSqGeHVmGa7RFEPPgy/TOcfelvrgehh0NFnJrZp2F0U0m4e+4i2W3DPPFYw5cri+bw64Ej2pBiaT5G6Wlcgx5GzUHI60RjLg3KpxSazSibeQVvkgKG72BvoeEhn09lmF1gv6p/OTyneYVYVR1KCqZuk2c5QpU8xeUHVEuQpNqZBXb9DQuK/fdJJVCZT4Ze6T32NnMZuDb6y/XrCCwLwf4/ftmZUnA==
   - secure: CPINlAUH38IMGU5QxY86hmbAL0wYLNnY0ozk6Q6JffGl4L21cMDA5DQRPIQsHfJZ1A291LxHi42mwTeDSfoPSS7jaDgxQyqiwpbKvgpdQ56iG548nCQOrEsdW8Wvj/dGYXsKFukWUuMnYmzF7OsmJwjGem3D03qT4er9Lq8//lG/0GwYwMHqi52tokxrru5D/bfEseffnI5+nu1WLJOuwm+BhSug32j6x9rOYqdyl+q7ZCFAo9AIZU02C8EJZal6DvW6JDB/lJsP/dlECZrXHXQJhaiBS5oFNBTHOSsO0QzNjm6MwpwIshNB0PYWEEusRp1iFFvm8XLQL537DimbXw==
   #- secure: BF6tscQCa9uZgh3YvCu9xfVcOshnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
@@ -29,6 +30,7 @@ script:
   - echo $foo
   - echo $var
   - echo $name
+  - echo $a
 # Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
