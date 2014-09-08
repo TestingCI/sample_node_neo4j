@@ -13,7 +13,7 @@ services:
 # The path for Xunit to output test reports
 env:
  global:
-  - Fool=bar
+  - test=bar
   - secure: P/CaLf6zFhZxxkNWQ7H8MKCBVQ1Ect4ssDprsbUXpme76zo4Xa+H9ypdU9KXTt4dUvRRNsEboaM/WYkVgjn/xN5W4V2bWrzmBu/u2nNG6nKnEBZlTK3jWt4WVSmB8EloXOSHnUUKWJFCcQIF3MImKzHkuRtL5zfFC05CSHIc7qfHVx0xjXfDQOYlXiGshl7TyfTsxW4b0iUCVH7DDcD1uxhjS/PF73FG/F8wy38R8QEQcJg46YDssk/cdu8yhKAa/RJpW08EG4unpiFQxnC1uXWPJf4JkulkQQvyDJY4Ok15IbWhowYSHCXIbTUhg3MypwV/6j+83nzge+XgaNBbDA==
    #hnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
   - XUNIT_FILE=shippable/testresults/result.xml
