@@ -13,8 +13,8 @@ services:
 # The path for Xunit to output test reports
 env:
  global:
-  - secure: secure: cLURl3pGoQd+TOvynMfMoAzqZIV4tzGs+qjl43AKcekxo6q+mKF7TS9PwhfihJY3iZvIwjTr+m2IMauvBXGTv3yA5lMfSQSZgrREMYOrrnddWrs1FJRm1loWKb5kfMO/bjY0ccWNA47IJcyLxqeJWnnJgCqG4udeoYX6kr63vIqEh3eH2ZHnth2l0PkSV1Csd2QXCYIywv7YHSd8Ux4qyLwNiZI738Nm9FfMyhywLGsNI91zqQSC08BcG9Skp77kb0ev9LiKwX4Ep1dAhWfPBdqgrfkesL1H6uBSCMMCr4s3mh2QVswR+tl7wDzunCgjIrMaMaLtYSWkm0WHA4KeGQ== 
-  #- secure: BF6tscQCa9uZgh3YvCu9xfVcOshnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
+  - secure: P/CaLf6zFhZxxkNWQ7H8MKCBVQ1Ect4ssDprsbUXpme76zo4Xa+H9ypdU9KXTt4dUvRRNsEboaM/WYkVgjn/xN5W4V2bWrzmBu/u2nNG6nKnEBZlTK3jWt4WVSmB8EloXOSHnUUKWJFCcQIF3MImKzHkuRtL5zfFC05CSHIc7qfHVx0xjXfDQOYlXiGshl7TyfTsxW4b0iUCVH7DDcD1uxhjS/PF73FG/F8wy38R8QEQcJg46YDssk/cdu8yhKAa/RJpW08EG4unpiFQxnC1uXWPJf4JkulkQQvyDJY4Ok15IbWhowYSHCXIbTUhg3MypwV/6j+83nzge+XgaNBbDA==
+   #hnHM8fztL5LGhAWOODdnPMubqECKdMbG3LLHZXOxu2bH27qoOxvbgFxw+qnEimZeQeZ97QAqes1/8s2DDFqWdmOmh3A4Uu1derGgzvRmCTE8feu+BnIWrds2cx/i7B2aVrZq6Wtd1gt344jNDf1wCTKtzX1ko5VPdXLB8OJ5tAhsFXxrD1/MtDyHpXhZHdFZF3ZexYyfPb3JZrb6ftB9Kz5ZLqM+4U9+escvYug6T8MrPkwYxOFQWx/8xMSaPSwoemZWZpee7BU1n16Ydw7aqyc/avkWw4tvqvyjNttTY1mleerjs1W7TWEg+ilw==
   - XUNIT_FILE=shippable/testresults/result.xml
 
 # Create directories for test and coverage reports
@@ -25,14 +25,12 @@ before_script:
 # Running the tests with grunt
 script:
   - npm test
-  - echo $Foo
-  
+  - echo $foo
+ 
+matrix:
+  include:
+    - node_js: 0.11
 # Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui=bdd --reporter=xunit-file
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
-after_archive:
-      
-      - echo $SHIPPABLE_ARCHIVE_DOWNLOAD_URL
-      - echo $SHIPPABLE_ARTIFACTS_URL
-      - echo $ARTIFACTS_UPLOAD_SUCCESSFUL
