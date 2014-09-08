@@ -27,7 +27,7 @@ before_script:
 script:
   - npm test
   - echo $foo
-  - echo $Fool
+  - echo $test
  
 matrix:
   include:
