@@ -6,6 +6,7 @@ language: node_js
 node_js:
   - 0.10
   
+  
 #neo4j runs on default port 7474
 services:
  - neo4j
